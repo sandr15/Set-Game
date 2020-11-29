@@ -231,7 +231,7 @@ struct SetGame
         selectedCards.remove(at: indexToDeselect)
         deselectCard(card)
       }
-      else if selectedCards.count == 3 {
+      else if selectedCards.count == 3 && !isValidSet() {
         let cardToKeep = selectedCards[indexToDeselect]
         deselectThreeCards()
         selectedCards.append(cardToKeep)
